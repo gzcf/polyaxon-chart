@@ -311,16 +311,17 @@ redis:
             topologyKey: "kubernetes.io/hostname"
 
 rabbitmq:
-  imageTag: "3.6.12-management"
-  image: "rabbitmq"
-  imagePullPolicy: IfNotPresent
-  rabbitmqUsername: polyaxon
+  rbacEnabled: false
+  rabbitmq:
+    username: polyaxon
+    password: polyaxon
   persistence:
     enabled: false
   resources:
     requests:
       memory: 256Mi
       cpu: 300m
+  replicas: 1
   affinity:
     podAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
