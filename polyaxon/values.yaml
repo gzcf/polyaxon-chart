@@ -80,6 +80,25 @@ persistence:
   #   - mountPath: "/storage/2"
   #     existingClaim: "storage-2-pvc"
 
+auth:
+  ldap:
+    enabled: false
+    serverUri:
+    globalOptions:
+    connectionOptions:
+    bindDN:
+    bindPassword:
+    userSearchBaseDN:
+    userSearchFilterStr:
+    userDNTemplate:
+    startTLS: false
+    userAttrMap:
+    groupSearchBaseDN:
+    groupSearchGroupType:
+    requireGroup:
+    denyGroup:
+
+
 nodeSelectors:
   core:
   experiments:
